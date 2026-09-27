@@ -1,0 +1,112 @@
+PROJECT: Content Prism
+
+PURPOSE:
+Turn one idea into multiple high-quality, LinkedIn-ready post drafts using angle-based templates and deterministic generation. The app must work fully offline, without any AI key.
+
+NON-GOALS:
+- No user accounts
+- No cloud storage
+- No social media APIs
+- No complex design system
+- No analytics
+- No payments
+
+CORE PRINCIPLES:
+- Ship small, but solid
+- Deterministic first, AI second
+- Human-editable outputs
+- Fast, local, simple
+- Every feature must support: Generate, Edit, Export, Reuse
+
+USER FLOW:
+1) User enters idea and context
+2) User selects angles
+3) App generates drafts
+4) User edits drafts
+5) User exports or saves session
+
+ANGLE SYSTEM:
+Base Angles:
+- Story
+- Mistake
+- Quick Tip
+- Myth
+- Tutorial
+- Before After
+- Lessons
+
+Extended Angles:
+- Misconception
+- Mental Model
+- Expert Trap
+- Beginner Explanation
+- Contrarian
+- Industry Lie
+- Prediction
+- Status Flip
+- Checklist
+- SOP Drop
+- Tool Stack
+- Automation
+- Failure Story
+- Origin Story
+- Turning Point
+- Client Mirror
+- Who This Is Not For
+- Leverage Lens
+- Second Order Effects
+- Business Impact
+- Trend Jack
+- Role Based
+- Career Angle
+- Competitive Tear Down
+
+DATA MODELS:
+Angle:
+- key
+- name
+- category
+- description
+- template
+
+Session:
+- id
+- createdAt
+- idea
+- audience
+- voice
+- domain
+- goal
+- length
+- angles[]
+- drafts[]
+
+Draft:
+- angleKey
+- text
+- wordCount
+- readTime
+- healthNotes[]
+
+SETTINGS:
+- spiceEnabled
+- apiKeyOptional
+- model
+
+QUALITY RULES:
+- Strong hook in first 2 lines
+- Short paragraphs
+- Skimmable bullets where relevant
+- No hashtags by default
+- Avoid overused phrases
+- Business-relevant, not motivational fluff
+
+EXPORTS:
+- Markdown
+- CSV
+
+SUCCESS CRITERIA:
+- Works without internet
+- Sessions persist locally
+- Drafts feel human, not templated
+- Exported files open cleanly in common tools
